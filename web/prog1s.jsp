@@ -14,15 +14,15 @@
     </head>
     <body>
         <h1>Display Pattern</h1>
-        <form action="prog1s.jsp">
+        <form method="post" action="prog1s.jsp">
         Enter Number Of Lines<br>
-        <input type="number" min="1" name="lines"><br><br>
+        <input type="number" min="1" name="num" required><br><br>
         <input type="submit" value="Submit"><br><br>
         </form>
         
         <%
-            if(request.getParameter("lines") != null && request.getParameter("lines") != "" ){
-                int n=Integer.parseInt(request.getParameter("lines"));
+            if(request.getParameter("num") != null){
+                int n=Integer.parseInt(request.getParameter("num"));
                 for(int i=1;i<=n;i++){
                     for(int j=1;j<=i;j++){
                         out.print(j + " ");
