@@ -24,9 +24,29 @@
             <input type="number" name="lucky"><br><br>
             Favorite Food:
             <input type="text" name="food"><br><br>
-            <input type="submit" value="Submit">
+            <input type="submit" value="Submit"><br>
         </form>
-        
+        <%
+            String n=request.getParameter("name");
+            String bday=request.getParameter("dob");
+            String email=request.getParameter("mail");
+            String lnum=request.getParameter("lucky");
+            String fFood=request.getParameter("food");
+            
+            if(n==null || bday==null || email==null || lnum==null || fFood==null){
+                
+            }
+            else if(n=="" || bday=="" || email=="" || lnum=="" || fFood==""){
+               out.println("<br>Please Enter All Inputs");
+            }
+            else{
+                out.println("<br>Name : " + n);
+                out.println("<br>DOB : " + bday);
+                out.println("<br>Email : " + email);
+                out.println("<br>Lucky Number : " + lnum);
+                out.println("<br>Favourite Food : " + fFood);
+            }
+        %>
         
     </body>
 </html>

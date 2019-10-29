@@ -17,16 +17,13 @@
         
         <c:choose>
             <c:when test="${param.operation=='add'}">
-                <c:out value="Result = "/>
-                <c:out value="${param.n1 + param.n2}"/>
+                Result = ${param.n1 + param.n2}
             </c:when>
             <c:when test="${param.operation=='sub'}">
-                <c:out value="Result = "/>
-                <c:out value="${param.n1 - param.n2}"/>
+                Result = ${param.n1 - param.n2}
             </c:when>
             <c:when test="${param.operation=='mul'}">
-                <c:out value="Result = "/>
-                <c:out value="${param.n1 * param.n2}"/>
+                Result = ${param.n1 * param.n2}
             </c:when>
             <c:otherwise>
                 <c:out value="Please Choose a Valid Operation"/>
